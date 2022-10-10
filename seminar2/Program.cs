@@ -40,10 +40,14 @@ Console.Write("Введите номер дня недели: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 if(n == 6 || n == 7)
+{
     Console.WriteLine("ВЫХОДНОЙ!!!");
-
+}
 if (n < 1 || n > 7) 
+{
     Console.WriteLine("В неделе семь дней!");
-  
+}
 else
+{
     Console.WriteLine("Будний день.");
+}
