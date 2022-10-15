@@ -28,9 +28,9 @@ int x2 = Coordinate("x", "b");
 int y2 = Coordinate("y", "b");
 int z2 = Coordinate("z", "b");
 
-int Coordinate(string coordinateName, string pointName)
+int Coordinate(string coordinate, string point)
 {
-    Console.Write($"Введите координату {coordinateName} точки {pointName}: ");
+    Console.Write($"Введите координату {coordinate} точки {point}: ");
     return Convert.ToInt32(Console.ReadLine());
 }
 
@@ -41,7 +41,7 @@ double Decision(double x1, double x2, double y1, double y2, double z1, double z2
 
 double length =  Math.Round(Decision(x1, x2, y1, y2, z1, z2), 2 );
 
-Console.WriteLine($"Длина отрезка {length}");
+Console.WriteLine($"Длинна отрезка {length}");
 
 
 //Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
