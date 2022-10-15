@@ -16,7 +16,7 @@ void CheckingNumber(string num)
 if (num.Length == 5)
   CheckingNumber(num);
 
-else Console.WriteLine("Введи пятизначное число!");
+else Console.WriteLine("Введите пятизначное число!");
 
 
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
