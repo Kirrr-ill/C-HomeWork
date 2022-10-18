@@ -4,13 +4,10 @@
 
 double Stepen(double a, double b)
 {
-    double result = 1;
-
-   for(int i = 0; i <= b; i++)
-  {
-    result = result * a;
-  }
-    return Math.Pow(a, b);
+  double result = 1;
+  for(int i = 0; i <= b; i++)
+      result = result * a;
+  return Math.Pow(a, b);
 }
 
 Console.Write("Введите число A: ");
@@ -34,7 +31,6 @@ int Sum(int num)
   for (int i = 0; i < str.Length; i++)
      sum = sum + str[i] - '0';   
   return sum;
-  
 }
 
 Console.Write("Введите число: ");
@@ -50,30 +46,23 @@ Console.WriteLine("Сумма цифр в числе: " + sumN);
 
 int[] CreateRandomArray(int size, int min, int max)
 {
-    int[] array = new int[size]; 
-
+    int[] array = new int[size];
     for(int i = 0; i < size; i++)
         array[i] = new Random().Next(min, max + 1); 
-
     return array;
 }
-
 void ShowArray(int[] array)
 {
   int size = array.Length;
   int i = 0;
-
-  Console.Write("[");
-  
+  Console.Write("[");  
   while(i < size)
   {
     Console.Write(array[i]);
-    i++;
-    
+    i++;    
     if (i < size)
        Console.Write(", ");
   }
-
   Console.Write("]");
 } 
 
@@ -81,7 +70,7 @@ Console.Write("Введите величину массива M: ");
 int size = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите минимальное значение: ");
 int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите минимальное значение: ");
+Console.Write("Введите максимальное значение: ");
 int max = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = CreateRandomArray(size, min, max);
