@@ -30,8 +30,7 @@ int Sum(int num)
   for (int i = 0; i < str.Length; i++)
      sum = sum + str[i] - '0';   
   return sum;
-  
-}
+ }
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
