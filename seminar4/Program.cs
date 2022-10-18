@@ -4,12 +4,11 @@
 
 double Stepen(double a, double b)
 {
-    double result = 1;
+   double result = 1;
 
    for(int i = 0; i <= b; i++)
-  {
-    result = result * a;
-  }
+        result = result * a;
+    
     return Math.Pow(a, b);
 }
 
