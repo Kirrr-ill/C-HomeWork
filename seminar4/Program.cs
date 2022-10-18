@@ -31,7 +31,6 @@ int Sum(int num)
        sum = sum + str[i] - '0';   
   return sum;
 }
-
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
