@@ -9,7 +9,6 @@ double Stepen(double a, double b)
       result = result * a;
   return Math.Pow(a, b);
 }
-
 Console.Write("Введите число A: ");
 double a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число B: ");
@@ -29,7 +28,7 @@ int Sum(int num)
   int sum = 0;
   string str = num.ToString();
   for (int i = 0; i < str.Length; i++)
-     sum = sum + str[i] - '0';   
+       sum = sum + str[i] - '0';   
   return sum;
 }
 
@@ -46,10 +45,10 @@ Console.WriteLine("Сумма цифр в числе: " + sumN);
 
 int[] CreateRandomArray(int size, int min, int max)
 {
-    int[] array = new int[size];
-    for(int i = 0; i < size; i++)
-        array[i] = new Random().Next(min, max + 1); 
-    return array;
+  int[] array = new int[size];
+  for(int i = 0; i < size; i++)
+      array[i] = new Random().Next(min, max + 1); 
+  return array;
 }
 void ShowArray(int[] array)
 {
@@ -59,13 +58,12 @@ void ShowArray(int[] array)
   while(i < size)
   {
     Console.Write(array[i]);
-    i++;    
+        i++;    
     if (i < size)
        Console.Write(", ");
   }
   Console.Write("]");
 } 
-
 Console.Write("Введите величину массива M: ");
 int size = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите минимальное значение: ");
