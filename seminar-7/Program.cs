@@ -1,4 +1,5 @@
-﻿void ShowDoubleArray(double[] array)
+﻿
+void ShowDoubleArray(double[] array)
 {
     for(int i = 0; i< array.Length; i++)
         Console.Write(array[i] + " ");
@@ -62,6 +63,7 @@ double[,] CreateDoubleRandom2dArray()
     int maxVal = Convert.ToInt32(Console.ReadLine());
 
     double[,] array = new double[rows, columns];
+
     for(int i = 0; i < rows; i++)
         for(int j = 0; j < columns; j++)
             array[i, j] = Math.Round(new Random().Next(minVal, maxVal + 1) + new Random().NextDouble(), 1);
@@ -103,18 +105,19 @@ FindElementOf2DArray(array);
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-double[] AverageNumber(double[,] array)
+double[] AvgNumber(int[,] array)
 {
     double[] doubleArray = new double[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        double count = 0;
+        int count = 0;
         for (int j = 0; j < array.GetLength(0); j++, count++)
           doubleArray[i] += array[j, i];
+        doubleArray[i] /= count;
     }
     return doubleArray;
 }
 
-double[,] myarray = CreateDoubleRandom2dArray();
-ShowDouble2dArray(myarray);
-ShowDoubleArray(AverageNumber(myarray));
+int[,] myarray = CreateRandom2dArray();
+Show2dArray(myarray);
+ShowDoubleArray(AvgNumber(myarray));
