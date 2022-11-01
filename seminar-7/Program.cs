@@ -1,9 +1,8 @@
-﻿
-void ShowArray(int[] array) 
+﻿void ShowDoubleArray(double[] array)
 {
-  foreach (var item in array)
-    Console.Write(item + " ");
-  Console.WriteLine();
+    for(int i = 0; i< array.Length; i++)
+        Console.Write(array[i] + " ");
+    Console.WriteLine();
 }
 
 void ShowDouble2dArray(double[,] array)
@@ -63,7 +62,6 @@ double[,] CreateDoubleRandom2dArray()
     int maxVal = Convert.ToInt32(Console.ReadLine());
 
     double[,] array = new double[rows, columns];
-
     for(int i = 0; i < rows; i++)
         for(int j = 0; j < columns; j++)
             array[i, j] = Math.Round(new Random().Next(minVal, maxVal + 1) + new Random().NextDouble(), 1);
@@ -97,23 +95,26 @@ Show2dArray(array);
 FindElementOf2DArray(array);
 
 
-// // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-// // Например, задан массив:
+// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-int[] AverageNumber(int[,] array)
+double[] AverageNumber(double[,] array)
 {
-    int[] doubleArray = new int[array.GetLength(1)];
+    double[] doubleArray = new double[array.GetLength(1)];
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        int count = 0;
+        double count = 0;
         for (int j = 0; j < array.GetLength(0); j++, count++)
           doubleArray[i] += array[j, i];
-        
     }
     return doubleArray;
 }
 
-int[,] myarray = CreateRandom2dArray();
-Show2dArray(myarray);
-ShowArray(AverageNumber(myarray));
+double[,] myarray = CreateDoubleRandom2dArray();
+ShowDouble2dArray(myarray);
+ShowDoubleArray(AverageNumber(myarray));
